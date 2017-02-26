@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ylg.panel">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ylg"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--<activity-->
+            <!--android:name=".yy.yunyinListActivity"-->
+            <!--android:label="@string/title_yunyin_list"-->
+            <!--android:theme="@style/AppTheme.NoActionBar" />-->
+        <!--<activity-->
+            <!--android:name=".yy.yunyinDetailActivity"-->
+            <!--android:label="@string/title_yunyin_detail"-->
+            <!--android:parentActivityName=".yy.yunyinListActivity"-->
+            <!--android:theme="@style/AppTheme.NoActionBar">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.PARENT_ACTIVITY"-->
+                <!--android:value="com.ylg.panel.yy.yunyinListActivity" />-->
+        <!--</activity>-->
+
+        <!-- xz -->
+        <activity
+            android:name=".xz.ItemListActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".xz.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".xz.ItemListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ylg.panel.xz.ItemListActivity" />
+        </activity>
+        <!--<activity android:name=".xz.BuMenActivity" />-->
+        <!--<activity android:name=".xz.DiWeiActivity" />-->
+        <!--<activity android:name=".xz.HuoDongActivity" />-->
+        <!--<activity android:name=".xz.WorkGoalActivity" />-->
+        <!--<activity android:name=".xz.WorkMainActivity" />-->
+        <!--<activity android:name=".xz.HuoDong2" />-->
+        <!--<activity android:name=".xz.HuoDong3" />-->
+        <activity
+            android:name=".js.JSMainActivity2"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".js.JSMainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AlertActivity" />
+        <activity
+            android:name=".js.JSShowActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".xc.MagneticActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".js.JSShowPicActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AlertActivity" />
+        <activity
+            android:name=".yy.BbsActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Main2Activity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AlertActivity"></activity>
+        <activity android:name=".js.ImgSwitchActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AlertActivity"></activity>
+    </application>
+
+</manifest>

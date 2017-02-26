@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   <LinearLayout 
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       >
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="活动"
+        android:textSize="40sp"
+        android:layout_marginLeft="230dp"
+        android:id="@+id/huodong_title"
+        />
+        <Button 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一项"
+            android:id="@+id/huodong_next"
+            android:layout_marginLeft="230dp"
+            />
+   </LinearLayout>
+<TextView 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2014年11月，工作室举行了趣味白板活动，多组同时进行传递，传递过程中云小麓给大家答疑。在增进了员工对工作室的了解的同时也增加了工作的趣味性。"
+    />
+<ViewFlipper
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/huodong_flipper" 
+    android:layout_gravity="center_horizontal"
+    >
+</ViewFlipper>
+</LinearLayout>

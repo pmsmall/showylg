@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/rl_js_home"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/js_bg">
+
+    <!--<Button-->
+        <!--android:id="@+id/po_yellow"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_marginTop="60dp"-->
+        <!--android:layout_marginLeft="135dp"-->
+        <!--android:background="@android:color/transparent"/>-->
+
+    <!--&lt;!&ndash;添加网站点击按钮&ndash;&gt;-->
+    <!--<Button-->
+        <!--android:id="@+id/po_website"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_marginRight="100dp"-->
+        <!--android:layout_marginBottom="60dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@android:color/transparent"/>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_js_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#ffffff"
+        app:srcCompat="@drawable/ylg"/>
+</RelativeLayout>

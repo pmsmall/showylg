@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="工作重点"
+        android:textSize="40sp"
+        android:id="@+id/workmain_title"
+        />
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="认真监督并执行工作室相关规章制度，让工作室有序、规范的发展" 
+        android:textSize="13sp"
+        android:id="@+id/workmain_text1"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="步步落实干部储备制度，跟进各部门培训并留下相关资料，形成可长期利用的中心云端文件" 
+        android:textSize="13sp"
+        android:id="@+id/workmain_text2"
+        />
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="积极规范福利文化，在各个节日为中心员工带去工作室大家庭的温暖，提高其归属感" 
+        android:textSize="13sp"
+        android:id="@+id/workmain_text3"
+        />
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="各个部门积极协作，致力于学生工作，为广大中南师生提供方便准确的网络文化信息" 
+        android:textSize="13sp"
+        android:id="@+id/workmain_text4"
+        />
+</LinearLayout>

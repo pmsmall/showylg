@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="工作目标"
+        android:textSize="40sp"
+        android:id="@+id/workgoal_title"
+        />
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="加强行政部在中心的桥梁作用，让工作室员工形成“一盘棋”思想，共同努力建设中心文化" 
+        android:textSize="13sp"
+        android:id="@+id/workgoal_text1"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="合理分配资源，积极培养各方面的人才，为中心做好传承工作" 
+        android:id="@+id/workgoal_text2"
+        />
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="加强部门自身与部门间的交流，达到工作效率最大化" 
+        android:id="@+id/workgoal_text3"
+        />
+</LinearLayout>

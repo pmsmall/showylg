@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#fff"
+    >
+
+<TextView
+        android:id="@+id/bumen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="部门"
+        android:textSize="40sp" />
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="30dp"
+    >
+<TextView
+        android:id="@+id/bumen_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="行政部——办公室"
+        android:textSize="13sp" />
+<Button 
+    android:id="@+id/bumen_bt1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jt"
+    />
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="30dp"
+    >
+<TextView
+    android:id="@+id/bumen_text2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="行政部——人资组"
+    android:textSize="13sp" />
+<Button 
+    android:id="@+id/bumen_bt2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jt"
+    />
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="30dp"
+    >
+<TextView
+    android:id="@+id/bumen_text3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="行政部——纪检组"
+    android:textSize="13sp" />
+<Button 
+    android:id="@+id/bumen_bt3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/jt"
+    />
+</LinearLayout>
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="50dp"
+    >
+    <TextView
+    android:id="@+id/bumen_t11"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1.负责中心会议记录" 
+    android:visibility="gone"
+    />
+<TextView
+    android:id="@+id/bumen_t12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2. 网站通讯录更新" 
+    android:visibility="gone"
+    android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t13"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="3. 网站值班排班" 
+    android:visibility="gone"
+    android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t14"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="4. 网站卫生考核表的制作" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="5. 中心员工档案的制作" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t16"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="6. 活动时场地的租借、布置和物资购买" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+	<TextView
+    android:id="@+id/bumen_t21"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1.培训的收集和安排" 
+    android:visibility="gone"
+    />
+    <TextView
+    android:id="@+id/bumen_t22"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2.员工转正转试用考试的安排" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t23"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="3.每月的绩效考核" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t24"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="4.员工生日发放祝福" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t25"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="5.招新及制度培训会的策划" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t26"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="6.云小麓的运行 " 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t31"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1.微博考核" 
+    android:visibility="gone"
+    />
+<TextView
+    android:id="@+id/bumen_t32"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2.信息港卫生考核" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t33"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="3.进出站统计" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t34"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="4.统计值班情况" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+<TextView
+    android:id="@+id/bumen_t35"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="5.值班统计和请假和调班" 
+    android:visibility="gone"
+     android:layout_marginTop="20dp"
+    />
+</LinearLayout>
+</LinearLayout>
+</LinearLayout>

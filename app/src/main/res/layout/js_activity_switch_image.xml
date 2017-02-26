@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <com.ylg.panel.js.circle.ImageCycleView
+        android:id="@+id/xc_images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+    </com.ylg.panel.js.circle.ImageCycleView>
+    <!--<RadioGroup-->
+    <!--android:id="@+id/gallery_group"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--</RadioGroup>-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="#ffffff"
+        app:srcCompat="@drawable/ylg"/>
+</RelativeLayout>

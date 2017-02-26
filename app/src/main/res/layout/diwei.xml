@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="地位"
+        android:textSize="40sp"
+        android:id="@+id/diwei_title"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="统筹协调，制定、落实工作室规章制度和年度工作计划" 
+        android:id="@+id/diwei_text1"
+        />
+<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="完成各种活动的前期准备、活动会场布置以及活动记录" 
+        android:id="@+id/diwei_text2"
+        />
+<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="员工信息的收集和整理分类以及值班等日常工作的人员安排" 
+        android:id="@+id/diwei_text3"
+        />
+<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="做好资源管理工作（如招新、培训、绩效考核、员工福利等）和活动策划撰写及工作安排" 
+        android:id="@+id/diwei_text4"
+        />
+</LinearLayout>

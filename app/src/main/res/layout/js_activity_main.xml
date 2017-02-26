@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="#fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <!--<android.support.v4.view.ViewPager
+            android:id="@+id/id_viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/line">
+        </android.support.v4.view.ViewPager>-->
+        <!--
+            time:2016-11-25 01:55:05
+            change:by li
+            content:add imageview,listview
+        -->
+        <!--上方Logo-->
+        <LinearLayout
+            android:id="@+id/ll_logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <com.ylg.panel.js.views.WrapContentHeightViewPager
+                android:id="@+id/vp_images"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </com.ylg.panel.js.views.WrapContentHeightViewPager>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:weightSum="1"
+            android:orientation="vertical">
+        <!--四个Tab--><!--delete android:padding="30dp" time:2016-11-29 02:12:17 modify by taojiangs-->
+            <LinearLayout
+                android:id="@+id/line"
+                android:layout_width="fill_parent"
+                android:padding="30dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_logo"
+                android:background="#fff"
+                android:gravity="center_vertical">
+                <!--android:background="@drawable/bottom_bar"-->
+                <LinearLayout
+                    android:id="@+id/id_tab_cet"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:descendantFocusability="beforeDescendants"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/btn_tab_cet"
+                        android:layout_width="32dp"
+                        android:layout_height="28dp"
+                        android:background="#0000"
+                        android:clickable="false"
+                        android:src="@drawable/js_cet_normal"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tv_tab_cet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CET成绩"
+                        android:textColor="#7ea1b1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_tab_computer"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:descendantFocusability="beforeDescendants"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/btn_tab_computer"
+                        android:layout_width="32dp"
+                        android:layout_height="28dp"
+                        android:background="#0000"
+                        android:clickable="false"
+                        android:src="@drawable/js_computer_normal"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tv_tab_computer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="计算机等级"
+                        android:textColor="#7ea1b1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_tab_person"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:descendantFocusability="beforeDescendants"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/btn_tab_person"
+                        android:layout_width="32dp"
+                        android:layout_height="28dp"
+                        android:background="#0000"
+                        android:clickable="false"
+                        android:src="@drawable/js_god2_normal"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tv_tab_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="找男女神"
+                        android:textColor="#7ea1b1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_tab_percent"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:descendantFocusability="beforeDescendants"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/btn_tab_percent"
+                        android:layout_width="32dp"
+                        android:layout_height="28dp"
+                        android:background="#0000"
+                        android:clickable="false"
+                        android:src="@drawable/js_boygirl_normal"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tv_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="男女比例"
+                        android:textColor="#7ea1b1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_tab_teacher"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:descendantFocusability="beforeDescendants"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageButton
+                        android:id="@+id/btn_tab_teacher"
+                        android:layout_width="32dp"
+                        android:layout_height="28dp"
+                        android:background="#0000"
+                        android:clickable="false"
+                        android:src="@drawable/js_teacher_normal"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tv_tab_teacher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="找辅导员"
+                        android:textColor="#7ea1b1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!--查询部分--><!--delete  android:layout_marginTop="2dp" modify by taojiang time:2016-11-29 02:17:10-->
+            <LinearLayout
+                android:id="@+id/rl_search"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/line"
+                android:layout_marginTop="2dp"
+                android:weightSum="1"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="#fff"/>-->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_searchPages"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp">
+                <!--84dp改为100dp-->
+                </android.support.v4.view.ViewPager>
+                <!--time:2016-11-29 02:53:53 modyfy by taojiang function:fill the empty-->
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#fff"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--下方ListView，微云麓-->
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_items"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:layout_below="@+id/rl_search"-->
+            <!--android:background="#fff">-->
+            <!--<ListView-->
+                <!--android:id="@+id/lv_ads"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" >-->
+            <!--</ListView>-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+</ScrollView>
