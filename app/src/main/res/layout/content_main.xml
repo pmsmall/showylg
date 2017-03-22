@@ -30,7 +30,18 @@
         android:layout_alignStart="@+id/imageView2"
         android:layout_marginStart="129dp"
         android:layout_marginTop="47dp"
-        android:id="@+id/imageView4" />
+        android:id="@+id/imageView4" /> 技术
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:color/background_light"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignEnd="@+id/imageView4"
+        android:layout_marginEnd="46dp"
+        android:layout_marginTop="97dp"
+
+        android:id="@+id/imageView5" /> 外媒
 
     <ImageView
         android:layout_width="wrap_content"
@@ -40,17 +51,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="121dp"
         android:layout_marginTop="15dp"
-        android:id="@+id/imageView5" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:color/background_light"
-        android:layout_below="@+id/imageView5"
-        android:layout_alignEnd="@+id/imageView4"
-        android:layout_marginEnd="46dp"
-        android:layout_marginTop="97dp"
-        android:id="@+id/imageView6" />
+        android:id="@+id/imageView6" /> 宣传
 
     <ImageView
         android:layout_width="wrap_content"
@@ -59,7 +60,7 @@
         android:layout_alignBottom="@+id/imageView6"
         android:layout_toEndOf="@+id/imageView6"
         android:layout_marginStart="59dp"
-        android:id="@+id/imageView7" />
+        android:id="@+id/imageView7" /> 行政
 
     <ImageView
         android:layout_width="wrap_content"
@@ -69,7 +70,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="101dp"
         android:layout_marginTop="19dp"
-        android:id="@+id/imageView8" />
+        android:id="@+id/imageView8" /> 运营
 
     <ImageView
         android:layout_width="wrap_content"

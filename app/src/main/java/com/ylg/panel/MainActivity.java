@@ -30,6 +30,7 @@ import android.widget.RelativeLayout;
 import com.ylg.panel.js.ImgSwitchActivity;
 import com.ylg.panel.js.JSMainActivity2;
 import com.ylg.panel.js.JSShowPicActivity;
+import com.ylg.panel.js.JSShowTextActivity;
 import com.ylg.panel.thread.HomeThread;
 import com.ylg.panel.thread.IconManager;
 import com.ylg.panel.thread.RandomThread;
@@ -229,9 +230,9 @@ public class MainActivity extends AppCompatActivity
 //                String result = " 云麓谷工作室，成立于2013年，前身是2000年成立的中国大学生勤工助学在线，是中南大学网络文化服务中心的重要组成部分，隶属于中南大学学生工作部（处）。奉行“技术中成长，服务中育人”的理念，多年来创作了一批批“富有特色、导向正确、影响深远”的网络文化微产品，服务师生。其中，由我们提供技术支持的辅导员技能大赛系统，在湖南省高校广泛使用，有利于湖南省辅导员素质的提升。另外，云麓谷服务号作为中南大学唯一的信息服务型多功能综合性微信号，兼具娱乐性、实用性、互动性于一体，目前拥有粉丝量15000余人 ，举办的“最美辅导员”活动，信息接收量达693912。查空教室，四六级成绩，计算机成绩，找人等多种快捷的功能广受学生欢迎，最近的一次四六级查询，一天内的查询量就达到77977次。通过交互型微产品，云麓工作室宣传网络德育，加强校园网络文明的构建力量，唱响网络思想文化主旋律。";
 //                show(result);
 //
-//                Intent po_yellow = new Intent(MainActivity.this, JSShowPicActivity.class);
+                Intent po_yellow = new Intent(MainActivity.this, JSShowTextActivity.class);
 //                po_yellow.setFlags(R.drawable.ylgall);
-//                startActivity(po_yellow);
+                startActivity(po_yellow);
                 return false;
             }
         });
@@ -281,6 +282,8 @@ public class MainActivity extends AppCompatActivity
                 m.wm_y0 = getPreferenceY(363.47f, wm.getHeight());
                 while (yy.getHeight() < 0) Thread.sleep(10);
                 m.yy_x0 = getPreferenceX(217, yy.getWidth());
+//                Log.d("Before resize->", ""+wm.getWidth());
+//                Log.d("Before resize->", ""+wm.getHeight());
                 m.yy_y0 = getPreferenceY(89, yy.getHeight());
                 while (xc.getHeight() < 0) Thread.sleep(10);
 //                m.xc_x0 = getPreferenceX(602.4f, xc.getWidth());
@@ -302,6 +305,8 @@ public class MainActivity extends AppCompatActivity
             xc = resizeBitmap(xc);
             xz = resizeBitmap(xz);
             yy = resizeBitmap(yy);
+//            Log.d("After resize->", ""+wm.getWidth());
+//            Log.d("After resize->", ""+wm.getHeight());
             m.setWidth(wm.getWidth());
             titleBitmap = resizeBitmap(titleBitmap);
             titleBitmap1 = resizeBitmap(titleBitmap1);

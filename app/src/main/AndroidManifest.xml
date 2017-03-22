@@ -90,6 +90,10 @@
         <activity android:name=".js.ImgSwitchActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AlertActivity"></activity>
+        <activity
+            android:name=".js.JSShowTextActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AlertActivity" />
     </application>
 
 </manifest>
