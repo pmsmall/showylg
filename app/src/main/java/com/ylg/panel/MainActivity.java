@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity
     private ImageView center;
     private Canvas canvas, layoutCanvas;
     private Paint pen;
-    private Bitmap bitmap, centerImage, js, yy, xz, wm, xc, background, defaultCenter, titleBitmap, titleBitmap1;
+    private Bitmap bitmap, centerImage, background, defaultCenter, titleBitmap, titleBitmap1, fw, yl, nj;
+//    private Bitmap js, yy, xz, wm, xc;
     private Image image;
     private RelativeLayout relativeLayout;
     private RefreshThread refresh;
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity
     private IconManager m = IconManager.iconManager;
     private float bitmapWidth = 1024;
     private float bitmapHeight = 576;
-    private int[] imageviewId = {R.id.imageView4, R.id.imageView5, R.id.imageView6, R.id.imageView7, R.id.imageView8};
+//    private int[] imageviewId = {R.id.imageView4, R.id.imageView5, R.id.imageView6, R.id.imageView7, R.id.imageView8};
+    private int[] imageviewId = {R.id.imageView4, R.id.imageView8, R.id.imageView6};
     private ImageView[] views;
     private ImageView title, title1;
     private FloatingActionButton fab;
@@ -165,6 +167,9 @@ public class MainActivity extends AppCompatActivity
         new AlertDialog.Builder(MainActivity.this).setTitle("").setMessage(result).setPositiveButton("是", null).show();
     }
 
+    /**
+     * 将原来的五个部门分类修改为三个图标
+     */
     private void init() {
         getInfo();
 
@@ -188,26 +193,38 @@ public class MainActivity extends AppCompatActivity
         bitmapDrawable = new BitmapDrawable(inputStream);
         titleBitmap1 = bitmapDrawable.getBitmap();
 
-        inputStream = resources.openRawResource(R.raw.js);
+        inputStream = resources.openRawResource(R.raw.icon_home1);
         bitmapDrawable = new BitmapDrawable(inputStream);
-        js = bitmapDrawable.getBitmap();
-        RandomThread.width = js.getWidth();
+        fw = bitmapDrawable.getBitmap();
+        RandomThread.width = fw.getWidth();
 
-        inputStream = resources.openRawResource(R.raw.xc);
+        inputStream = resources.openRawResource(R.raw.icon_home2);
         bitmapDrawable = new BitmapDrawable(inputStream);
-        xc = bitmapDrawable.getBitmap();
+        yl = bitmapDrawable.getBitmap();
 
-        inputStream = resources.openRawResource(R.raw.xz);
+        inputStream = resources.openRawResource(R.raw.icon_home3);
         bitmapDrawable = new BitmapDrawable(inputStream);
-        xz = bitmapDrawable.getBitmap();
-
-        inputStream = resources.openRawResource(R.raw.wm);
-        bitmapDrawable = new BitmapDrawable(inputStream);
-        wm = bitmapDrawable.getBitmap();
-
-        inputStream = resources.openRawResource(R.raw.yy);
-        bitmapDrawable = new BitmapDrawable(inputStream);
-        yy = bitmapDrawable.getBitmap();
+        nj = bitmapDrawable.getBitmap();
+//        inputStream = resources.openRawResource(R.raw.js);
+//        bitmapDrawable = new BitmapDrawable(inputStream);
+//        js = bitmapDrawable.getBitmap();
+//        RandomThread.width = js.getWidth();
+//
+//        inputStream = resources.openRawResource(R.raw.xc);
+//        bitmapDrawable = new BitmapDrawable(inputStream);
+//        xc = bitmapDrawable.getBitmap();
+//
+//        inputStream = resources.openRawResource(R.raw.xz);
+//        bitmapDrawable = new BitmapDrawable(inputStream);
+//        xz = bitmapDrawable.getBitmap();
+//
+//        inputStream = resources.openRawResource(R.raw.wm);
+//        bitmapDrawable = new BitmapDrawable(inputStream);
+//        wm = bitmapDrawable.getBitmap();
+//
+//        inputStream = resources.openRawResource(R.raw.yy);
+//        bitmapDrawable = new BitmapDrawable(inputStream);
+//        yy = bitmapDrawable.getBitmap();
 
 //        inputStream = resources.openRawResource(R.raw.ylg);
 //        bitmapDrawable = new BitmapDrawable(inputStream);
@@ -272,42 +289,49 @@ public class MainActivity extends AppCompatActivity
     class initThread extends Thread {
         public void run() {
             try {
-                while (js.getHeight() < 0) Thread.sleep(10);
-                m.js_x0 = getPreferenceX(276, js.getWidth());
-                m.js_y0 = getPreferenceY(291, js.getHeight());
-                while (wm.getHeight() < 0) Thread.sleep(10);
-//                m.wm_x0 = getPreferenceX(495.1f, wm.getWidth());
-//                m.wm_y0 = getPreferenceY(34, wm.getHeight());
-                m.wm_x0 = getPreferenceX(602.4f, wm.getWidth());
-                m.wm_y0 = getPreferenceY(363.47f, wm.getHeight());
-                while (yy.getHeight() < 0) Thread.sleep(10);
-                m.yy_x0 = getPreferenceX(217, yy.getWidth());
-//                Log.d("Before resize->", ""+wm.getWidth());
-//                Log.d("Before resize->", ""+wm.getHeight());
-                m.yy_y0 = getPreferenceY(89, yy.getHeight());
-                while (xc.getHeight() < 0) Thread.sleep(10);
-//                m.xc_x0 = getPreferenceX(602.4f, xc.getWidth());
-//                m.xc_y0 = getPreferenceY(363.47f, xc.getHeight());
-                m.xc_x0 = getPreferenceX(495.1f, xc.getWidth());
-                m.xc_y0 = getPreferenceY(34, xc.getHeight());
-                while (xz.getHeight() < 0) Thread.sleep(10);
-                m.xz_x0 = getPreferenceX(696f, xz.getWidth());
-                m.xz_y0 = getPreferenceY(201, xz.getHeight());
-//                while (title.getHeight() < 0) Thread.sleep(10);
-//
+//                while (js.getHeight() < 0) Thread.sleep(10);
+//                m.js_x0 = getPreferenceX(276, js.getWidth());
+//                m.js_y0 = getPreferenceY(291, js.getHeight());
+//                while (wm.getHeight() < 0) Thread.sleep(10);
+//                m.wm_x0 = getPreferenceX(602.4f, wm.getWidth());
+//                m.wm_y0 = getPreferenceY(363.47f, wm.getHeight());
+//                while (yy.getHeight() < 0) Thread.sleep(10);
+//                m.yy_x0 = getPreferenceX(217, yy.getWidth());
+//                m.yy_y0 = getPreferenceY(89, yy.getHeight());
+//                while (xc.getHeight() < 0) Thread.sleep(10);
+//                m.xc_x0 = getPreferenceX(495.1f, xc.getWidth());
+//                m.xc_y0 = getPreferenceY(34, xc.getHeight());
+//                while (xz.getHeight() < 0) Thread.sleep(10);
+//                m.xz_x0 = getPreferenceX(696f, xz.getWidth());
+//                m.xz_y0 = getPreferenceY(201, xz.getHeight());
+                while (fw.getHeight() < 0) Thread.sleep(10);
+                m.js_x0 = getPreferenceX(276, fw.getWidth());
+                m.js_y0 = getPreferenceY(291, fw.getHeight());
+                while (yl.getHeight() < 0) Thread.sleep(10);
+                m.yy_x0 = getPreferenceX(217, yl.getWidth());
+                m.yy_y0 = getPreferenceY(89, yl.getHeight());
+                while (nj.getHeight() < 0) Thread.sleep(10);
+                m.xc_x0 = getPreferenceX(495.1f, nj.getWidth());
+                m.xc_y0 = getPreferenceY(34, nj.getHeight());
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             IconManager.init();
-            js = resizeBitmap(js);
-            RandomThread.width = js.getWidth();
-            wm = resizeBitmap(wm);
-            xc = resizeBitmap(xc);
-            xz = resizeBitmap(xz);
-            yy = resizeBitmap(yy);
+//            js = resizeBitmap(js);
+//            RandomThread.width = js.getWidth();
+//            wm = resizeBitmap(wm);
+//            xc = resizeBitmap(xc);
+//            xz = resizeBitmap(xz);
+//            yy = resizeBitmap(yy);
+            fw = resizeBitmap(fw);
+            RandomThread.width = fw.getWidth();
+            yl = resizeBitmap(yl);
+            nj = resizeBitmap(nj);
+
 //            Log.d("After resize->", ""+wm.getWidth());
 //            Log.d("After resize->", ""+wm.getHeight());
-            m.setWidth(wm.getWidth());
+            m.setWidth(nj.getWidth());
             titleBitmap = resizeBitmap(titleBitmap);
             titleBitmap1 = resizeBitmap(titleBitmap1);
             while (center.getHeight() <= 0)
@@ -316,7 +340,8 @@ public class MainActivity extends AppCompatActivity
             while (center.getHeight() <= 0) continue;
             center.setX(m.screen_width / 2 - center.getWidth() / 2);
             center.setY(m.screen_height / 2 - center.getHeight() / 2);
-            Bitmap bitmaps[] = {js, wm, xc, xz, yy};
+//            Bitmap bitmaps[] = {js, wm, xc, xz, yy};
+            Bitmap bitmaps[] = {fw, yl, nj};
             views = new ImageView[imageviewId.length];
             for (int i = 0; i < views.length; i++) {
                 views[i] = (ImageView) findViewById(imageviewId[i]);
@@ -451,16 +476,25 @@ public class MainActivity extends AppCompatActivity
 //                canvas.drawBitmap(xc, m.getXc_x(), m.getXc_y(), pen);
 //                canvas.drawBitmap(yy, m.getYy_x(), m.getYy_y(), pen);
 //                canvas.drawBitmap(wm, m.getWm_x(), m.getWm_y(), pen);
+                /**
+                 * 2017-4-26 00:12:25 by涛江
+                 */
+//                views[0].setX(m.getJs_x());
+//                views[0].setY(m.getJs_y());
+//                views[1].setX(m.getWm_x());
+//                views[1].setY(m.getWm_y());
+//                views[2].setX(m.getXc_x());
+//                views[2].setY(m.getXc_y());
+//                views[3].setX(m.getXz_x());
+//                views[3].setY(m.getXz_y());
+//                views[4].setX(m.getYy_x());
+//                views[4].setY(m.getYy_y());
                 views[0].setX(m.getJs_x());
                 views[0].setY(m.getJs_y());
-                views[1].setX(m.getWm_x());
-                views[1].setY(m.getWm_y());
+                views[1].setX(m.getYy_x());
+                views[1].setY(m.getYy_y());
                 views[2].setX(m.getXc_x());
                 views[2].setY(m.getXc_y());
-                views[3].setX(m.getXz_x());
-                views[3].setY(m.getXz_y());
-                views[4].setX(m.getYy_x());
-                views[4].setY(m.getYy_y());
 
 
                 // center.setImageBitmap(bitmap);
@@ -477,27 +511,32 @@ public class MainActivity extends AppCompatActivity
                 break;
             case 1:
                 //TODO to Waimeibu
-                Intent wmintent = new Intent(MainActivity.this,JSShowPicActivity.class);
-                wmintent.setFlags(R.drawable.wmb);
-                startActivity(wmintent);
+//                Intent wmintent = new Intent(MainActivity.this,JSShowPicActivity.class);
+//                wmintent.setFlags(R.drawable.wmb);
+//                startActivity(wmintent);
+                Intent yyintent = new Intent(this, ImgSwitchActivity.class);
+                yyintent.setFlags(1);
+                startActivity(yyintent);
                 break;
             case 2:
 //                Intent xcintent = new Intent(MainActivity.this, JSShowPicActivity.class);
 //                xcintent.setFlags(R.drawable.xuanchuan);
 //                startActivity(xcintent);
-                Intent xcintent = new Intent(MainActivity.this, ImgSwitchActivity.class);
+                Intent xcintent = new Intent(MainActivity.this, JSShowPicActivity.class);
+                xcintent.setFlags(R.drawable.nj1);
                 startActivity(xcintent);
                 break;
             case 3:
                 //TODO to Xingzheng
-                Intent xzintent = new Intent(MainActivity.this,JSShowPicActivity.class);
-                xzintent.setFlags(R.drawable.xzb);
-                startActivity(xzintent);
+//                Intent xzintent = new Intent(MainActivity.this,JSShowPicActivity.class);
+//                xzintent.setFlags(R.drawable.xzb);
+//                startActivity(xzintent);
                 break;
             case 4:
-                Intent yyintent = new Intent(this, JSShowPicActivity.class);
-                yyintent.setFlags(R.drawable.bbs);
-                startActivity(yyintent);
+//                Intent yyintent = new Intent(this, JSShowPicActivity.class);
+//                Intent yyintent = new Intent(this, ImgSwitchActivity.class);
+//                yyintent.setFlags(1);
+//                startActivity(yyintent);
                 break;
         }
     }
@@ -512,18 +551,18 @@ public class MainActivity extends AppCompatActivity
                         go(0, var2.getX(), var2.getY());
                         flag1 = true;
                     }
-                    if (isInWm(var2.getX(), var2.getY())) {
-                        go(1, var2.getX(), var2.getY());
-                        flag2 = true;
-                    }
+//                    if (isInWm(var2.getX(), var2.getY())) {
+//                        go(1, var2.getX(), var2.getY());
+//                        flag2 = true;
+//                    }
                     if (isInXc(var2.getX(), var2.getY())) {
                         go(2, var2.getX(), var2.getY());
                         flag3 = true;
                     }
-                    if (isInXz(var2.getX(), var2.getY())) {
-                        go(3, var2.getX(), var2.getY());
-                        flag4 = true;
-                    }
+//                    if (isInXz(var2.getX(), var2.getY())) {
+//                        go(3, var2.getX(), var2.getY());
+//                        flag4 = true;
+//                    }
                     if (isInYy(var2.getX(), var2.getY())) {
                         go(4, var2.getX(), var2.getY());
                         flag5 = true;
@@ -538,14 +577,14 @@ public class MainActivity extends AppCompatActivity
                             go(0, var2.getX(), var2.getY());
                             flag1 = true;
                         }
-                    if (flag2)
-                        if (!isInWm(var2.getX(), var2.getY())) {
-                            rego(1);
-                            flag2 = false;
-                        } else {
-                            go(1, var2.getX(), var2.getY());
-                            flag2 = true;
-                        }
+//                    if (flag2)
+//                        if (!isInWm(var2.getX(), var2.getY())) {
+//                            rego(1);
+//                            flag2 = false;
+//                        } else {
+//                            go(1, var2.getX(), var2.getY());
+//                            flag2 = true;
+//                        }
 
                     if (flag3)
                         if (!isInXc(var2.getX(), var2.getY())) {
@@ -556,14 +595,14 @@ public class MainActivity extends AppCompatActivity
                             flag3 = true;
                         }
 
-                    if (flag4)
-                        if (!isInXz(var2.getX(), var2.getY())) {
-                            rego(3);
-                            flag4 = false;
-                        } else {
-                            go(3, var2.getX(), var2.getY());
-                            flag4 = true;
-                        }
+//                    if (flag4)
+//                        if (!isInXz(var2.getX(), var2.getY())) {
+//                            rego(3);
+//                            flag4 = false;
+//                        } else {
+//                            go(3, var2.getX(), var2.getY());
+//                            flag4 = true;
+//                        }
 
                     if (flag5)
                         if (!isInYy(var2.getX(), var2.getY())) {
@@ -581,24 +620,24 @@ public class MainActivity extends AppCompatActivity
                         if (isInJs(var2.getX(), var2.getY()))
                             click(0);
                     }
-                    if (flag2) {
-                        rego(1);
-                        flag2 = false;
-                        if (isInWm(var2.getX(), var2.getY()))
-                            click(1);
-                    }
+//                    if (flag2) {
+//                        rego(1);
+//                        flag2 = false;
+//                        if (isInWm(var2.getX(), var2.getY()))
+//                            click(1);
+//                    }
                     if (flag3) {
                         rego(2);
                         flag3 = false;
                         if (isInXc(var2.getX(), var2.getY()))
                             click(2);
                     }
-                    if (flag4) {
-                        rego(3);
-                        flag4 = false;
-                        if (isInXz(var2.getX(), var2.getY()))
-                            click(3);
-                    }
+//                    if (flag4) {
+//                        rego(3);
+//                        flag4 = false;
+//                        if (isInXz(var2.getX(), var2.getY()))
+//                            click(3);
+//                    }
                     if (flag5) {
                         rego(4);
                         flag5 = false;
@@ -632,47 +671,47 @@ public class MainActivity extends AppCompatActivity
             float width = 0, height = 0;
             switch (i) {
                 case 0:
-                    width = js.getWidth();
-                    height = js.getHeight();
+                    width = fw.getWidth();
+                    height = fw.getHeight();
                     break;
                 case 1:
-                    width = wm.getWidth();
-                    height = wm.getHeight();
+//                    width = wm.getWidth();
+//                    height = wm.getHeight();
                     break;
                 case 2:
-                    width = xc.getWidth();
-                    height = xc.getHeight();
+                    width = nj.getWidth();
+                    height = nj.getHeight();
                     break;
                 case 3:
-                    width = xz.getWidth();
-                    height = xz.getHeight();
+//                    width = xz.getWidth();
+//                    height = xz.getHeight();
                     break;
                 case 4:
-                    width = yy.getWidth();
-                    height = yy.getHeight();
+                    width = yl.getWidth();
+                    height = yl.getHeight();
                     break;
             }
             return new Location(x - width / 2, y - height / 2);
         }
 
         boolean isInJs(float x, float y) {
-            return x >= m.getJs_x() && y >= m.getJs_y() && m.getJs_x() + js.getWidth() >= x && m.getJs_y() + js.getHeight() >= y;
+            return x >= m.getJs_x() && y >= m.getJs_y() && m.getJs_x() + fw.getWidth() >= x && m.getJs_y() + fw.getHeight() >= y;
         }
 
         boolean isInXc(float x, float y) {
-            return x >= m.getXc_x() && y >= m.getXc_y() && m.getXc_x() + xc.getWidth() >= x && m.getXc_y() + xc.getHeight() >= y;
+            return x >= m.getXc_x() && y >= m.getXc_y() && m.getXc_x() + nj.getWidth() >= x && m.getXc_y() + nj.getHeight() >= y;
         }
 
-        boolean isInXz(float x, float y) {
-            return x >= m.getXz_x() && y >= m.getXz_y() && m.getXz_x() + xz.getWidth() >= x && m.getXz_y() + xz.getHeight() >= y;
-        }
+//        boolean isInXz(float x, float y) {
+//            return x >= m.getXz_x() && y >= m.getXz_y() && m.getXz_x() + xz.getWidth() >= x && m.getXz_y() + xz.getHeight() >= y;
+//        }
 
-        boolean isInWm(float x, float y) {
-            return x >= m.getWm_x() && y >= m.getWm_y() && m.getWm_x() + wm.getWidth() >= x && m.getWm_y() + wm.getHeight() >= y;
-        }
+//        boolean isInWm(float x, float y) {
+//            return x >= m.getWm_x() && y >= m.getWm_y() && m.getWm_x() + wm.getWidth() >= x && m.getWm_y() + wm.getHeight() >= y;
+//        }
 
         boolean isInYy(float x, float y) {
-            return x >= m.getYy_x() && y >= m.getYy_y() && m.getYy_x() + yy.getWidth() >= x && m.getYy_y() + yy.getHeight() >= y;
+            return x >= m.getYy_x() && y >= m.getYy_y() && m.getYy_x() + yl.getWidth() >= x && m.getYy_y() + yl.getHeight() >= y;
         }
     }
 

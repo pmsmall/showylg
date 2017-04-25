@@ -32,6 +32,9 @@ public class ImgSwitchActivity extends AppCompatActivity implements View.OnClick
     private List<View> imgList;
     private List<Integer> imgId;
 //    private RadioGroup gallery_group;
+    private static final int FW = 0;
+    private static final int YL = 1;
+    private static final int NJ = 2;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +56,28 @@ public class ImgSwitchActivity extends AppCompatActivity implements View.OnClick
         xc_images.setCycle_T(ImageCycleView.CYCLE_T.CYCLE_VIEW_NORMAL);
         ArrayList<String> imageDescList=new ArrayList<>();
         ArrayList<Integer> idList=new ArrayList<>();
-        idList.add(R.drawable.xuanchuan);
-        idList.add(R.drawable.zhibo);
-
-        imageDescList.add("");
-        imageDescList.add("");
+        switch (getIntent().getFlags()){
+            case FW:
+                idList.add(R.drawable.fw1);
+                imageDescList.add("");
+                break;
+            case YL:
+                idList.add(R.drawable.yl1);
+                idList.add(R.drawable.yl2);
+                idList.add(R.drawable.yl3);
+                idList.add(R.drawable.yl4);
+                idList.add(R.drawable.yl5);
+                imageDescList.add("");
+                imageDescList.add("");
+                imageDescList.add("");
+                imageDescList.add("");
+                imageDescList.add("");
+                break;
+            case NJ:
+                idList.add(R.drawable.nj1);
+                imageDescList.add("");
+                break;
+        }
         initCarsuelView(imageDescList, idList);
 //        imgList = new ArrayList<View>();
 //        imgId = new ArrayList<>();
